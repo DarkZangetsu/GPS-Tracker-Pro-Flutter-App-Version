@@ -1,6 +1,6 @@
 # gps_tracker_pro
 
-A new Flutter project.
+This application is used to track the real-time location of your Android smartphone. The database used is Supabase.
 
 ## Getting Started
 
