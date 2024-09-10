@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
@@ -10,7 +12,10 @@ import 'dart:convert';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 class LocationTracker extends StatefulWidget {
+  const LocationTracker({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _LocationTrackerState createState() => _LocationTrackerState();
 }
 
@@ -145,7 +150,7 @@ class _LocationTrackerState extends State<LocationTracker> {
       'altitude': position.altitude,
       'accuracy': position.accuracy,
       'speed': position.speed,
-      'timestamp': position.timestamp?.toIso8601String(),
+      'timestamp': position.timestamp.toIso8601String(),
     };
 
     storedLocations.add(json.encode(locationData));
